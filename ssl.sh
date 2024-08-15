@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# 检查 acme.sh 是否已经安装
+if [ ! -d "~/.acme.sh" ]; then
+  echo "acme.sh 未安装，正在安装..."
+  curl https://get.acme.sh | sh
+fi
+
 # 日志函数
 LOGI() { echo -e "\033[32m[INFO]\033[0m $1"; }
 LOGD() { echo -e "\033[34m[DEBUG]\033[0m $1"; }
