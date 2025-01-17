@@ -31,8 +31,8 @@ DOMAIN-SUFFIX,steam.ru.qtlglb.com
 DOMAIN-SUFFIX,steam.tv
 DOMAIN-SUFFIX,steambroadcast.akamaized.net
 DOMAIN-SUFFIX,steamcdn-a.akamaihd.net
-DOMAIN-SUFFIX,steamcommunity-a.akamaihd.net
-DOMAIN-SUFFIX,steamcommunity.com
+#DOMAIN-SUFFIX,steamcommunity-a.akamaihd.net
+#DOMAIN-SUFFIX,steamcommunity.com
 DOMAIN-SUFFIX,steamcontent.tnkjmec.com
 DOMAIN-SUFFIX,steamdeck.com
 DOMAIN-SUFFIX,steamgames.com
