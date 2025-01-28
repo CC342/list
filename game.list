@@ -2,6 +2,7 @@
 #Steam
 DOMAIN,steamcdn-a.akamaihd.net
 DOMAIN-SUFFIX,steamserver.net
+DOMAIN-SUFFIX,store.steampowered.com
 DOMAIN-SUFFIX,cdn-ali.content.steamchina.com
 DOMAIN-SUFFIX,cdn-qc.content.steamchina.com
 DOMAIN-SUFFIX,cdn-ws.content.steamchina.com
