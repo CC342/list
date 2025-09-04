@@ -20,6 +20,123 @@
     "reverse_mapping": true
   },
   "outbounds": [
+  {
+    "tag": "KR2",
+    "type": "vless",
+    "server": "kr.dooi.eu.org",
+    "server_port": 443,
+    "uuid": "9efcc1f6-4b2a-4bac-e8d7-560f5124b076",
+    "flow": "xtls-rprx-vision",
+    "tls": {
+      "enabled": true,
+      "server_name": "ocsp2.apple.com",
+      "reality": {
+        "enabled": true,
+        "public_key": "c01PJ62Z-ckOLhUQQO6-irUlhUAhwzjVI-Rb_u4Yl38"
+      },
+      "fingerprint": "chrome"
+    }
+  },
+  {
+    "tag": "Chatgpt",
+    "type": "vless",
+    "server": "dooi.eu.org",
+    "server_port": 443,
+    "uuid": "f2f8f751-eb23-4c64-8324-f9a2b95cad22",
+    "flow": "xtls-rprx-vision",
+    "tls": {
+      "enabled": true
+    }
+  },
+  {
+    "tag": "us GCP",
+    "type": "vless",
+    "server": "34.16.182.230",
+    "server_port": 50651,
+    "uuid": "f455359a-c546-4bd0-f5df-c6fe7e4f42f8",
+    "tls": {
+      "enabled": true,
+      "server_name": "www.speedtest.net",
+      "reality": {
+        "enabled": true,
+        "public_key": "qhTzYYIgBzDLNYR79oxftqdo1kzL-1_hGJKfqrOliCY"
+      },
+      "fingerprint": "chrome"
+    }
+  },
+  {
+    "tag": "韩国arm",
+    "type": "vless",
+    "server": "imeet.eu.org",
+    "server_port": 58229,
+    "uuid": "d138c2fc-949b-449c-aa80-ffef95f6b582",
+    "tls": {
+      "enabled": true
+    }
+  },
+  {
+    "tag": "arm",
+    "type": "trojan",
+    "server": "imeet.eu.org",
+    "server_port": 8041,
+    "password": "cc123456",
+    "tls": {
+      "enabled": true
+    }
+  },
+  {
+    "tag": "tw",
+    "type": "trojan",
+    "server": "share4k.eu.org",
+    "server_port": 8443,
+    "password": "cc123456",
+    "tls": {
+      "enabled": true
+    }
+  },
+  {
+    "tag": "hk",
+    "type": "trojan",
+    "server": "go.share4k.eu.org",
+    "server_port": 22924,
+    "password": "cc123456",
+    "tls": {
+      "enabled": true
+    }
+  },
+  {
+    "tag": "HKreality",
+    "type": "vless",
+    "server": "34.92.54.3",
+    "server_port": 38011,
+    "uuid": "96a4d868-4021-433d-8b67-e0e6a1acc12d",
+    "tls": {
+      "enabled": true,
+      "server_name": "www.speedtest.org",
+      "reality": {
+        "enabled": true,
+        "public_key": "g1f1wLjim5gOVGnI5LGUV0dL4iFXPoiepOPZfSxJe14"
+      },
+      "fingerprint": "chrome"
+    }
+  },
+  {
+    "tag": "Us",
+    "type": "vless",
+    "server": "35.212.158.1",
+    "server_port": 23464,
+    "uuid": "15ee7f2d-b263-4242-ca84-0acf177b8f4b",
+    "flow": "xtls-rprx-vision",
+    "tls": {
+      "enabled": true,
+      "server_name": "www.cloudflare.com",
+      "reality": {
+        "enabled": true,
+        "public_key": "rwpbqas_HY8knlW0fFSIeUrjgBXHBzSNboflsLD8elA"
+      },
+      "fingerprint": "chrome"
+    }
+  }
     {"tag": "🚀 节点选择", "type": "selector", "outbounds": ["♻️ 自动选择", "🎯 全球直连", "KR2", "Chatgpt", "韩国arm", "arm", "tw", "hk", "us GCP", "us"]},
     {"tag": "♻️ 自动选择", "type": "urltest", "outbounds": ["KR2", "Chatgpt", "韩国arm", "arm", "tw", "hk", "us GCP", "us"], "interval": "10m", "tolerance": 100},
     {"tag": "📞 Talkatone", "type": "selector", "outbounds": ["us GCP", "us"]},
