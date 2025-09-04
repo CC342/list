@@ -20,10 +20,10 @@
     "reverse_mapping": true
   },
   "outbounds": [
-    {"tag": "🚀 节点选择", "type": "selector", "outbounds": ["♻️ 自动选择", "🎯 全球直连", " KR2", "Chatgpt", "韩国arm", "arm", "tw"，"hk", "us GCP", "us"]},
-    {"tag": "♻️ 自动选择", "type": "urltest", "outbounds": ["{all}"], "interval": "10m", "tolerance": 100},
+    {"tag": "🚀 节点选择", "type": "selector", "outbounds": ["♻️ 自动选择", "🎯 全球直连", "KR2", "Chatgpt", "韩国arm", "arm", "tw", "hk", "us GCP", "us"]},
+    {"tag": "♻️ 自动选择", "type": "urltest", "outbounds": ["KR2", "Chatgpt", "韩国arm", "arm", "tw", "hk", "us GCP", "us"], "interval": "10m", "tolerance": 100},
     {"tag": "📞 Talkatone", "type": "selector", "outbounds": ["us GCP", "us"]},
-    {"tag": "💬 Chatgpt", "type": "selector", "outbounds": ["KR2", "Chatgpt"]}
+    {"tag": "💬 Chatgpt", "type": "selector", "outbounds": ["KR2", "Chatgpt"]},
     {"tag": "GLOBAL", "type": "selector", "outbounds": ["🚀 节点选择", "♻️ 自动选择", "📞 Talkatone", "💬 Chatgpt", "🎯 全球直连"]},
     {"tag": "🎯 全球直连", "type": "direct"}
   ],
