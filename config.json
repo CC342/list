@@ -11,7 +11,7 @@
       {"clash_mode": "global", "server": "fakeip"},
       {"query_type": "HTTPS", "action": "reject"},
       {"domain_suffix": ["services.googleapis.cn", "googleapis.cn", "xn--ngstr-lra8j.com"], "server": "foreign"},
-      {"rule_set": ["geosite-cn", "geosite-steamcn", "geosite-apple"], "server": "local"},
+      {"rule_set": ["geosite-cn"], "server": "local"},
       {"query_type": ["A", "AAAA"], "server": "fakeip", "rewrite_ttl": 1}
     ],
     "final": "foreign",
@@ -36,15 +36,15 @@
       {"clash_mode": "global", "outbound": "GLOBAL"},
       {"rule_set": "geosite-!cn", "outbound": "🚀 节点选择"},
       {"rule_set": "geosite-cn", "outbound": "🎯 全球直连"},
-      {"rule_set": "geoip-talkstone", "outbound": "📞 Talkatone"},
-      {"rule_set": "geoip-chat", "outbound": "💬 Chatgpt"},
+      {"rule_set": "geosite-talkatone", "outbound": "📞 Talkatone"},
+      {"rule_set": "geosite-chat", "outbound": "💬 Chatgpt"},
       {"rule_set": "geoip-cn", "outbound": "🎯 全球直连"}
     ],
     "rule_set": [
       {"tag": "geosite-chat", "type": "remote", "format": "binary", "url": "https://gh-proxy.com/https://raw.githubusercontent.com/CC342/list/main/category-ai-chat-!cn.srs", "download_detour": "🎯 全球直连"},
       {"tag": "geosite-!cn", "type": "remote", "format": "binary", "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/geolocation-!cn.srs", "download_detour": "🎯 全球直连"},
       {"tag": "geosite-cn", "type": "remote", "format": "binary", "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/cn.srs", "download_detour": "🎯 全球直连"},
-      {"tag": "geoip-talkatone", "type": "remote", "format": "binary", "url": "https://gh-proxy.com/https://raw.githubusercontent.com/CC342/list/main/talkatone.srs", "download_detour": "🎯 全球直连"},
+      {"tag": "geosite-talkatone", "type": "remote", "format": "binary", "url": "https://gh-proxy.com/https://raw.githubusercontent.com/CC342/list/main/talkatone.srs", "download_detour": "🎯 全球直连"},
       {"tag": "geoip-cn", "type": "remote", "format": "binary", "url": "https://gh-proxy.com/https://github.com/qljsyph/ruleset-icon/raw/refs/heads/main/sing-box/geoip/China-ASN-combined-ip.srs", "download_detour": "🎯 全球直连"}
     ],
     "final": "🚀 节点选择",
