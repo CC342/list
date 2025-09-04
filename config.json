@@ -40,17 +40,15 @@
       {"clash_mode": "global", "outbound": "GLOBAL"},
       {"rule_set": "geosite-!cn", "outbound": "🚀 节点选择"},
       {"rule_set": "geosite-cn", "outbound": "🎯 全球直连"},
-      {"rule_set": "geoip-google", "outbound": "📞 Talkatone"},
-      {"rule_set": "geoip-apple", "outbound": "💬 Chatgpt"},
+      {"rule_set": "geoip-talkstone", "outbound": "📞 Talkatone"},
+      {"rule_set": "geoip-chat", "outbound": "💬 Chatgpt"},
       {"rule_set": "geoip-cn", "outbound": "🎯 全球直连"}
     ],
     "rule_set": [
-      {"tag": "geosite-google", "type": "remote", "format": "binary", "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/google.srs", "download_detour": "🎯 全球直连"},
-      {"tag": "geosite-apple", "type": "remote", "format": "binary", "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/apple.srs", "download_detour": "🎯 全球直连"},
+      {"tag": "geosite-chat", "type": "remote", "format": "binary", "url": "https://gh-proxy.com/https://raw.githubusercontent.com/CC342/list/main/category-ai-chat-!cn.srs", "download_detour": "🎯 全球直连"},
       {"tag": "geosite-!cn", "type": "remote", "format": "binary", "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/geolocation-!cn.srs", "download_detour": "🎯 全球直连"},
       {"tag": "geosite-cn", "type": "remote", "format": "binary", "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/cn.srs", "download_detour": "🎯 全球直连"},
-      {"tag": "geoip-google", "type": "remote", "format": "binary", "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/google.srs", "download_detour": "🎯 全球直连"},
-      {"tag": "geoip-apple", "type": "remote", "format": "binary", "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geoip/apple.srs", "download_detour": "🎯 全球直连"},
+      {"tag": "geoip-talkatone", "type": "remote", "format": "binary", "url": "https://gh-proxy.com/https://raw.githubusercontent.com/CC342/list/main/talkatone.srs", "download_detour": "🎯 全球直连"},
       {"tag": "geoip-cn", "type": "remote", "format": "binary", "url": "https://gh-proxy.com/https://github.com/qljsyph/ruleset-icon/raw/refs/heads/main/sing-box/geoip/China-ASN-combined-ip.srs", "download_detour": "🎯 全球直连"}
     ],
     "final": "🚀 节点选择",
@@ -74,12 +72,12 @@
   "experimental": {
     "cache_file": {
       "enabled": true,
-      "path": "/etc/sing-box/run/cache.db",
+      "path": "/etc/sing-box/cache.db",
       "store_fakeip": true
     },
     "clash_api": {
       "external_controller": "0.0.0.0:9095",
-      "external_ui": "/etc/sing-box/run/ui",
+      "external_ui": "/etc/sing-box/ui",
       "external_ui_download_url": "https://gh-proxy.com/https://github.com/Zephyruso/zashboard/archive/refs/heads/gh-pages.zip",
       "external_ui_download_detour": "🎯 全球直连",
       "secret": "",
