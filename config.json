@@ -1,5 +1,4 @@
-
-1232{
+{
   "dns": {
     "servers": [
       {"tag": "local", "type": "udp", "server": "223.5.5.5"},
