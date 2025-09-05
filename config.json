@@ -42,7 +42,8 @@
       {"rule_set": "geoip-cn", "outbound": "🎯 全球直连"}
     ],
     "rule_set": [
-      {"tag": "geosite-adblock", "type": "remote", "format": "binary", "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-ads-all.srs", "download_detour": "🎯 全球直连"},      {"tag": "geosite-chat", "type": "remote", "format": "binary", "url": "https://gh-proxy.com/https://raw.githubusercontent.com/CC342/list/main/category-ai-chat-!cn.srs", "download_detour": "🎯 全球直连"},
+      {"tag": "geosite-adblock", "type": "remote", "format": "binary", "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-ads-all.srs", "download_detour": "🎯 全球直连"},      
+      {"tag": "geosite-chat", "type": "remote", "format": "binary", "url": "https://gh-proxy.com/https://raw.githubusercontent.com/CC342/list/main/category-ai-chat-!cn.srs", "download_detour": "🎯 全球直连"},
       {"tag": "geosite-!cn", "type": "remote", "format": "binary", "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/geolocation-!cn.srs", "download_detour": "🎯 全球直连"},
       {"tag": "geosite-cn", "type": "remote", "format": "binary", "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/cn.srs", "download_detour": "🎯 全球直连"},
       {"tag": "geosite-talkatone", "type": "remote", "format": "binary", "url": "https://gh-proxy.com/https://raw.githubusercontent.com/CC342/list/main/talkatone.srs", "download_detour": "🎯 全球直连"},
