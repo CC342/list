@@ -11,7 +11,7 @@
       {"query_type": "HTTPS", "action": "reject"},
       {"domain_suffix": ["services.googleapis.cn", "googleapis.cn", "xn--ngstr-lra8j.com"], "server": "foreign"},
       {"rule_set": ["geosite-cn"], "server": "local"},      
-      {"query_type": ["A", "AAAA"] "server": "fakeip"}
+      {"query_type": ["A", "AAAA"], "server": "fakeip"}
     ],
     "independent_cache": true
   },
@@ -23,7 +23,6 @@
       "strict_route": true
     }
   ],
-  {
   "outbounds": [
     {"tag": "🚀 节点选择", "type": "selector", "outbounds": ["♻️ 自动选择", "🎯 全球直连", "KR2", "Chatgpt", "韩国arm", "arm", "tw", "hk", "us GCP", "us"]},
     {"tag": "♻️ 自动选择", "type": "urltest", "outbounds": ["KR2", "Chatgpt", "韩国arm", "arm", "tw", "hk", "us GCP", "us"], "interval": "10m", "tolerance": 100},
@@ -37,21 +36,14 @@
       {"action": "sniff"},
       {"type": "logical", "mode": "or", "rules": [{"protocol": "dns"}, {"port": 53}], "action": "hijack-dns"},
       { "ip_is_private": true, "outbound": "🎯 全球直连"},
-      {"type": "logical", "mode": "or", "rules": [{"port": 853} {"network": "udp", "port": 443}, {"protocol": "stun"}], "action": "reject"},
+      {"type": "logical", "mode": "or", "rules": [{"port": 853}, {"network": "udp", "port": 443}, {"protocol": "stun"}], "action": "reject"},
       {"rule_set": "geosite-adblock", "action": "reject"},
       {"clash_mode": "direct", "outbound": "🎯 全球直连"},
       {"clash_mode": "global", "outbound": "GLOBAL"},
       {"rule_set": "geosite-!cn", "outbound": "🚀 节点选择"},
       {"rule_set": "geosite-cn", "outbound": "🎯 全球直连"},
       {"rule_set": "geosite-talkatone", "outbound": "📞 Talkatone"},
-      {"rule_set": "geosite-chat", "outbound"experimental": {
-    "cache_file": {
-      "enabled": true,
-      "store_rdrc": true
-    },
-    "clash_api": {
-      "default_mode": "Enhanced"
-    }: "💬 Chatgpt"},
+      {"rule_set": "geosite-chat", "outbound"}: "💬 Chatgpt"},
       {"rule_set": "geoip-cn", "outbound": "🎯 全球直连"}
     ],
     "rule_set": [
@@ -62,14 +54,14 @@
       {"tag": "geosite-talkatone", "type": "remote", "format": "binary", "url": "https://gh-proxy.com/https://raw.githubusercontent.com/CC342/list/main/talkatone.srs", "download_detour": "🎯 全球直连"},
       {"tag": "geoip-cn", "type": "remote", "format": "binary", "url": "https://gh-proxy.com/https://github.com/qljsyph/ruleset-icon/raw/refs/heads/main/sing-box/geoip/China-ASN-combined-ip.srs", "download_detour": "🎯 全球直连"}
     ],    
-  }
+  },
   "experimental": {
     "cache_file": {
       "enabled": true,
       "store_rdrc": true
-    },
+      },
     "clash_api": {
       "default_mode": "Enhanced"
-    }
+      }
     }
 }
